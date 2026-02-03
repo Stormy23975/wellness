@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="newProfile">
+        <p>Please complete your emotional profile</p>
+        <form action="">
+            <label>First: <input type="text" name="first" required></label>
+            <label>Last: <input type="text" name="last" required></label>
+            <label>Emotional State<select id="physical">
+                    <option value="https://www.svgrepo.com/show/21651/smiling.svg">Happy</option>
+                    <option value="https://www.svgrepo.com/show/21630/sad.svg">Sad</option>
+                    <option value="https://www.svgrepo.com/show/31451/angry">Frustrated</option>
+                    <option value="https://www.svgrepo.com/show/401107/anxious-face-with-sweat">Anxious</option>
+                    <option value="https://www.svgrepo.com/show/270335/surprised-emoji">Surprised</option>
+
+                </select></label>
+            <input type="submit" value="Save Profile" id="saveProfile">
+        </form>
+
+    </div>
+
+
+
+    <div id="myProfile">
+
+        <section>
+            <img src="" id="emoji" width="100%" height="auto">
+            <p><span id="first"></span> <span id="last"></span> is curently feeling <span id="emotion"></span>.</p>
+        </section>
+        <button id="delProfile">Delete Profile</button>
+
+    </div>
+
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

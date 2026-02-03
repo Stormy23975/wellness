@@ -1,0 +1,158 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+}
+
+.hideMe {
+    display: none;
+}
+
+.showMe {
+    display: block;
+}
+
+
+/* Syle based on Material 3 :) */
+:root {
+    --color-primary: #8ab4f8;
+    --color-on-primary: #0b1d36;
+
+    --color-background: #0f172a;
+    --color-surface: #111827;
+    --color-surface-variant: #1f2933;
+
+    --color-on-surface: #e5e7eb;
+    --color-on-surface-variant: #9ca3af;
+
+    --color-outline: #374151;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --elevation-2: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+body {
+    padding: 1rem;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#newProfile,
+#myProfile {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--elevation-2);
+}
+
+
+#newProfile p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--color-on-surface-variant);
+}
+
+input,
+select {
+    padding: 0.65rem 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-outline);
+    background-color: var(--color-surface-variant);
+    color: var(--color-on-surface);
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+
+button,
+input[type="submit"] {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: var(--elevation-1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--elevation-2);
+}
+
+#myProfile section {
+    text-align: center;
+}
+
+#emoji {
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+#myProfile p {
+    font-size: 1rem;
+    color: var(--color-on-surface);
+}
+
+
+#delProfile {
+    margin-top: 1rem;
+    background-color: transparent;
+    color: var(--color-on-surface-variant);
+    box-shadow: none;
+}
+
+#delProfile:hover {
+    color: #f87171;
+}
